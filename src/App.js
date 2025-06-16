@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+// src/App.js
 import './App.css';
+import Header from './components/Header';
+import Section from './components/Section';
+import ensenanzaImg from './assets/images/ensenanza.jpeg';
+import ensenanzaVid from './assets/videos/ensenanza.mp4';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Section
+        titulo="Enseñanza y su concepto"
+        descripcion="La enseñanza es el proceso mediante el cual se facilita el aprendizaje."
+        imagen={ensenanzaImg}
+        video={ensenanzaVid}
+      />
+      {/* Aquí irían más <Section /> con otros datos */}
+    </>
   );
 }
 
