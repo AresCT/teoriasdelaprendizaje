@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/teoriasdelaprendizaje/static/css/main.f855e6bc.css",
-    "main.js": "/teoriasdelaprendizaje/static/js/main.25da2c69.js",
-    "static/js/453.cbb26d03.chunk.js": "/teoriasdelaprendizaje/static/js/453.cbb26d03.chunk.js",
-    "static/media/logo.svg": "/teoriasdelaprendizaje/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/teoriasdelaprendizaje/static/css/main.80e1c841.css",
+    "main.js": "/teoriasdelaprendizaje/static/js/main.777bd4e3.js",
+    "static/media/grafica.png": "/teoriasdelaprendizaje/static/media/grafica.a36d6ae055c806f81f99.png",
+    "static/media/arte.jpeg": "/teoriasdelaprendizaje/static/media/arte.acec77fcf0ddb3f905aa.jpeg",
+    "static/media/memoriaa.jpeg": "/teoriasdelaprendizaje/static/media/memoriaa.f3923a34e04e90206b64.jpeg",
+    "static/media/vocal.jpeg": "/teoriasdelaprendizaje/static/media/vocal.0991c3a62262f4f6936b.jpeg",
+    "static/media/mariamontessori.jpeg": "/teoriasdelaprendizaje/static/media/mariamontessori.8f43cd37eb858185af24.jpeg",
+    "static/media/dog.jpeg": "/teoriasdelaprendizaje/static/media/dog.48b28290537c5830c59b.jpeg",
+    "static/media/delius-latin-400-normal.woff": "/teoriasdelaprendizaje/static/media/delius-latin-400-normal.a73e297a6e86ea00821c.woff",
+    "static/media/rouge-script-latin-400-normal.woff": "/teoriasdelaprendizaje/static/media/rouge-script-latin-400-normal.e9672cee5be91fba33a6.woff",
+    "static/media/delius-latin-400-normal.woff2": "/teoriasdelaprendizaje/static/media/delius-latin-400-normal.be739911964df342b17b.woff2",
+    "static/media/rouge-script-latin-400-normal.woff2": "/teoriasdelaprendizaje/static/media/rouge-script-latin-400-normal.3df33e0c9dd6b1a428a1.woff2",
+    "static/media/notable-latin-400-normal.woff2": "/teoriasdelaprendizaje/static/media/notable-latin-400-normal.d32dab630bf73ff3a03c.woff2",
+    "static/media/notable-latin-400-normal.woff": "/teoriasdelaprendizaje/static/media/notable-latin-400-normal.1e1cca6e90d0ef4419e1.woff",
     "index.html": "/teoriasdelaprendizaje/index.html",
-    "main.f855e6bc.css.map": "/teoriasdelaprendizaje/static/css/main.f855e6bc.css.map",
-    "main.25da2c69.js.map": "/teoriasdelaprendizaje/static/js/main.25da2c69.js.map",
-    "453.cbb26d03.chunk.js.map": "/teoriasdelaprendizaje/static/js/453.cbb26d03.chunk.js.map"
+    "main.80e1c841.css.map": "/teoriasdelaprendizaje/static/css/main.80e1c841.css.map",
+    "main.777bd4e3.js.map": "/teoriasdelaprendizaje/static/js/main.777bd4e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.25da2c69.js"
+    "static/css/main.80e1c841.css",
+    "static/js/main.777bd4e3.js"
   ]
 }
