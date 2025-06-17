@@ -1,55 +1,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #e8d9ff;
+  background-color: #5c80d2;
   color: #333;
 }
 
-.header {
-  background: linear-gradient(135deg, #a463f2, #5c2d91);
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-  font-size: 2.5rem;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
 
-.section {
-  background: white;
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.section:hover {
-  transform: scale(1.01);
-}
-
-h2 {
-  text-align: center;
-  color: #5c2d91;
-}
-
-p {
-  text-align: center;
-}
-
-.media {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .media {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .media > * {
-    width: 45%;
-  }
-}

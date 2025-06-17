@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://AresCT.github.io/teoriasdelaprendizaje",
   "dependencies": {
+    "@fontsource/delius": "^5.2.6",
+    "@fontsource/notable": "^5.2.6",
+    "@fontsource/rouge-script": "^5.2.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
