@@ -1,3 +1,48 @@
+import React from 'react';
+
+// Estilos CSS con media queries para el componente Section
+const styles = {
+    section: {
+        background: 'linear-gradient(135deg,rgba(24, 129, 226, 0.31), #f3e9ff)',
+        borderRadius: '20px',
+        padding: '2rem',
+        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
+        margin: '2rem auto',      // Centrado horizontal con margen automático
+        maxWidth: '800px',
+        width: '90vw',            // 90% del ancho de la ventana para evitar overflow
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+    },
+    titulo: {
+        fontSize: '2rem',
+        margin: 0,
+        textAlign: 'center',
+    },
+    contenido: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '2rem',
+        flexWrap: 'wrap',
+    },
+    texto: {
+        flex: 1,
+        fontSize: '1.3rem',
+        whiteSpace: 'normal',
+        wordBreak: 'break-word',
+        textAlign: 'justify',
+        minWidth: '250px',
+    },
+    imagen: {
+        maxWidth: '200px',
+        height: 'auto',
+        borderRadius: '10px',
+        flexShrink: 0,
+    }
+};
+
+// Componente con soporte responsive usando CSS media queries
 const Section = ({
     titulo,
     descripcion,
@@ -6,72 +51,85 @@ const Section = ({
     estiloTexto = {},
     estiloImagen = {},
     estiloTarjeta = {}
-}) => (
-    <section
-        style={{
-            background: 'linear-gradient(135deg,rgba(24, 129, 226, 0.31), #f3e9ff)',
-            borderRadius: '20px',
-            padding: '2rem',
-            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
-            margin: '2rem 2rem',
-            maxWidth: '800px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1.5rem',
-            ...estiloTarjeta, // permite sobreescribir estilos externos
-        }}
-    >
-        <h2
-            style={{
-                fontSize: '2rem',
-                margin: 0,
-                textAlign: 'center',  // ← esto centra horizontalmente
-                ...estiloTitulo,
-            }}
-        >
-            {titulo}
-        </h2>
+}) => {
+    return (
+        <>
+            <style>
+                {`
+          @media (max-width: 768px) {
+            .section-contenido {
+              flex-direction: column !important;
+              align-items: center !important;
+            }
+            .section-texto {
+              max-width: 100% !important;
+              font-size: 1.1rem !important;
+              text-align: center !important;
+            }
+            .section-imagen {
+              max-width: 80% !important;
+              margin-top: 1rem;
+            }
+            .section-tarjeta {
+              width: 95vw !important;
+              margin: 1rem auto !important;
+              padding: 1rem !important;
+            }
+            .section-titulo {
+              font-size: 1.8rem !important;
+            }
+          }
+        `}
+            </style>
 
-
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: '2rem',
-                flexWrap: 'wrap',
-            }}
-        >
-            <p
+            <section
+                className="section-tarjeta"
                 style={{
-                    flex: 1,
-                    fontSize: '1.3rem',
-                    maxWidth: '600px',
-                    whiteSpace: 'normal',
-                    wordBreak: 'break-word',
-                    textAlign: 'justify',
-                    ...estiloTexto,
+                    ...styles.section,
+                    ...estiloTarjeta
                 }}
             >
-                {descripcion}
-            </p>
-            {imagen && (
-                <img
-                    src={imagen}
-                    alt={titulo}
+                <h2
+                    className="section-titulo"
                     style={{
-                        maxWidth: '200px',
-                        height: 'auto',
-                        borderRadius: '10px',
-                        flexShrink: 0,
-                        ...estiloImagen,
+                        ...styles.titulo,
+                        ...estiloTitulo,
                     }}
-                />
-            )}
+                >
+                    {titulo}
+                </h2>
 
-        </div>
+                <div
+                    className="section-contenido"
+                    style={{
+                        ...styles.contenido,
+                    }}
+                >
+                    <p
+                        className="section-texto"
+                        style={{
+                            ...styles.texto,
+                            ...estiloTexto,
+                        }}
+                    >
+                        {descripcion}
+                    </p>
 
-    </section>
-);
+                    {imagen && (
+                        <img
+                            className="section-imagen"
+                            src={imagen}
+                            alt={titulo}
+                            style={{
+                                ...styles.imagen,
+                                ...estiloImagen,
+                            }}
+                        />
+                    )}
+                </div>
+            </section>
+        </>
+    );
+};
 
 export default Section;

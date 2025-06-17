@@ -15,15 +15,16 @@ function App() {
   const [modal, setModal] = useState(null);
 
   const estiloBoton = {
-    backgroundColor: '#5C3D99',
-    color: '#fff',
+    backgroundColor: '#91D2F4',
+    color: '#334BA5',
     border: 'none',
-    padding: '1rem 2rem',
-    fontSize: '1.2rem',
+    padding: '10px 20px',
+    fontSize: '1.5rem',
     borderRadius: '10px',
     cursor: 'pointer',
     fontFamily: "'Delius', cursive"
   };
+
 
   const estiloModal = {
     position: 'fixed',
@@ -205,16 +206,30 @@ Educador como guía."
                 <p>B.F. Skinner creó el condicionamiento radical y operante</p>
                 <p>Iván Pavlov, padre del condicionamiento clásico</p>
 
-                <iframe
-                  width="100%"
-                  height="250"
-                  src="https://www.youtube.com/embed/88Zv3p55HdM"
-                  title="Video sobre el conductismo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ marginTop: '1rem', borderRadius: '10px', marginLeft: '10rem' }}
-                ></iframe>
+                <div style={{
+                  position: 'relative',
+                  paddingBottom: '56.25%', // 16:9 aspect ratio
+                  height: 0,
+                  overflow: 'hidden',
+                  marginTop: '1rem',
+                  borderRadius: '10px'
+                }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/88Zv3p55HdM"
+                    title="Video sobre el conductismo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '10px'
+                    }}
+                  ></iframe>
+                </div>
               </>
             }
             imagen={condu}
@@ -237,15 +252,18 @@ Educador como guía."
               border: '3px solid #5C3D99',
               maxWidth: '200px',
               width: '100%',
-              margin: '1rem',
-              marginTop: '-25rem'
+              margin: '1rem auto',
+              display: 'block'
             }}
             estiloTarjeta={{
               background: '#A4A6F3',
-              flex: '1 1 45%',
-              minWidth: '300px',
-              marginLeft: '5rem'
+              flex: '1 1 100%',
+              maxWidth: '800px',
+              margin: '1rem auto',
+              padding: '1rem',
+              borderRadius: '10px'
             }}
+
           />
         </div>
 
@@ -319,28 +337,16 @@ Educador como guía."
           Otros conceptos
         </h2>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-          <button
-            onClick={() => setModal('memoria')}
-            style={{ fontSize: '1.5rem', backgroundColor: '#91D2F4', color: '#334BA5', padding: '10px 20px', border: 'none', borderRadius: '10px' }}
-          >
+          <button onClick={() => setModal('memoria')} style={estiloBoton}>
             Memoria
           </button>
-          <button
-            onClick={() => setModal('estilos')}
-            style={{ fontSize: '1.5rem', backgroundColor: '#91D2F4', color: '#334BA5', padding: '10px 20px', border: 'none', borderRadius: '10px' }}
-          >
+          <button onClick={() => setModal('estilos')} style={estiloBoton}>
             Estilos de aprendizaje
           </button>
-          <button
-            onClick={() => setModal('objetivos')}
-            style={{ fontSize: '1.5rem', backgroundColor: '#91D2F4', color: '#334BA5', padding: '10px 20px', border: 'none', borderRadius: '10px' }}
-          >
+          <button onClick={() => setModal('objetivos')} style={estiloBoton}>
             Objetivos
           </button>
-          <button
-            onClick={() => setModal('inteligencias')}
-            style={{ fontSize: '1.5rem', backgroundColor: '#91D2F4', color: '#334BA5', padding: '10px 20px', border: 'none', borderRadius: '10px' }}
-          >
+          <button onClick={() => setModal('inteligencias')} style={estiloBoton}>
             Inteligencias múltiples
           </button>
         </div>
@@ -403,10 +409,31 @@ Educador como guía."
                 title="Estilos de aprendizaje"
               ></iframe>
             </div>
-            <button onClick={() => setModal(null)} style={estiloCerrar}>Cerrar</button>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
+              <button onClick={() => setModal(null)} style={estiloCerrar}>Cerrar</button>
+
+              <a
+                href="https://www.canva.com/design/DAGqkkjqEEM/WPkJ7dAQJuzTL0d7FXZO_w/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '0.5rem 1rem',
+                  backgroundColor: '#5C3D99',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  fontFamily: 'sans-serif'
+                }}
+              >
+                Ver en Canva
+              </a>
+            </div>
           </div>
         </div>
       )}
+
 
       {modal === 'inteligencias' && (
         <div style={estiloModal}>
@@ -415,7 +442,31 @@ Educador como guía."
             <p style={estiloTextoModal}>
               La teoría de las inteligencias múltiples, propuesta por Howard Gardner, sugiere que la inteligencia no es una entidad única, sino un conjunto de habilidades y capacidades distintas. Gardner identificó inicialmente ocho inteligencias: lingüística, lógico-matemática, espacial, musical, corporal-kinestésica, interpersonal, intrapersonal y naturalista.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2hJnFAysNNs?si=lvrBTxZUl5qCEvSa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%', // 16:9
+              height: 0,
+              overflow: 'hidden',
+              width: '100%',
+              borderRadius: '10px',
+              marginTop: '1rem'
+            }}>
+              <iframe
+                src="https://www.youtube.com/embed/2hJnFAysNNs?si=lvrBTxZUl5qCEvSa"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%'
+                }}
+              ></iframe>
+            </div>
             <button onClick={() => setModal(null)} style={estiloCerrar}>Cerrar</button>
           </div>
         </div>
