@@ -1,15 +1,14 @@
 import React from 'react';
 
-// Estilos CSS con media queries para el componente Section
 const styles = {
     section: {
         background: 'linear-gradient(135deg,rgba(24, 129, 226, 0.31), #f3e9ff)',
         borderRadius: '20px',
         padding: '2rem',
         boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
-        margin: '2rem auto',      // Centrado horizontal con margen automático
+        margin: '2rem auto',
         maxWidth: '800px',
-        width: '90vw',            // 90% del ancho de la ventana para evitar overflow
+        width: '90vw',
         display: 'flex',
         flexDirection: 'column',
         gap: '1.5rem',
@@ -42,7 +41,6 @@ const styles = {
     }
 };
 
-// Componente con soporte responsive usando CSS media queries
 const Section = ({
     titulo,
     descripcion,

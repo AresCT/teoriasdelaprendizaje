@@ -21,7 +21,7 @@ const VerticalSection = ({
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: '1.5rem',
-                ...estiloTarjeta, // permite sobreescribir desde el componente padre
+                ...estiloTarjeta,
             }}
         >
             <h2
